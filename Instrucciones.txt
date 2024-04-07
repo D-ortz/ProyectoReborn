@@ -1,0 +1,8 @@
+Cambiar el nombre de la base de datos en los archivos
+
+handeler_crear_usuario.php y handeler.php
+
+$servidor = "localhost";
+$usuario_servidor = "root";
+$contra_servidor = "";
+$bd = "prueba"; <=========AQUÍ

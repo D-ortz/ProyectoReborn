@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Cambiar el tipo de letra para todo el documento */
+body {
+    font-family: 'Titillium Web', sans-serif; /* Cambia el tipo de letra aquí */
+    background-image: linear-gradient(rgba(109, 156, 170, 0.75),rgba(0,0,0,0.75)), url("../files/cerebro.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    height: 70px;
+    color: bisque;
+    background-color: rgb(95, 110, 160);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    color: bisque;
+    align-items: center;
+    display: flex;
+}
+.logo img{
+    height: 80px;
+    margin-right: 10px;
+}
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+a{
+    color: bisque;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgba(238, 175, 175, 0.774);
+}
+.reg{
+    color: #0056b3;
+    text-decoration: dashed;
+}
+.reg:hover{
+color: #007bff;
+text-decoration: dashed;
+}
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+/* Centering login container */
+.caja-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Styling login form */
+.caja-formulario {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    font-family: 'Titillium Web', sans-serif; /* Cambia el tipo de letra aquí */
+}
+
+.caja-formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.entradas {
+    margin-bottom: 15px;
+}
+
+.entradas label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.entradas input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Styling login button */
+button {
+    width: 100%;
+    padding: 10px;/*#007bff*/
+    background-color: #5F6EA0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Titillium Web', sans-serif; /* Cambia el tipo de letra aquí */
+    font-size: large;
+
+}
+
+button:hover {/*#0056b3*/
+    background-color: #394363;
+}
+
+/* Estilo para el mensaje de error */
+#mensaje-error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los campos del formulario cuando hay un error */
+.entradas.error input {
+    border: 1px solid red;
+    background-color: #ffe6e6; /* Cambia el color de fondo a rojo claro */
+}

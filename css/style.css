@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Cambiar el tipo de letra para todo el documento */
+body {
+    font-family: 'Titillium Web', sans-serif; /* Cambia el tipo de letra aquí */
+    background-image: linear-gradient(rgba(109, 156, 170, 0.75),rgba(0,0,0,0.75)), url("../files/cerebro.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    height: 70px;
+    color: bisque;
+    background-color: rgb(95, 110, 160);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    color: bisque;
+    align-items: center;
+    display: flex;
+}
+.logo img{
+    height: 80px;
+    margin-right: 10px;
+}
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+a{
+    color: bisque;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgba(238, 175, 175, 0.774);
+}
+.reg{
+    color: #0056b3;
+    text-decoration: dashed;
+}
+.reg:hover{
+color: #007bff;
+text-decoration: dashed;
+}
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+}
+.caja{
+    display: flex;
+    justify-content: center;
+}   
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 90vh;
+    text-align: center;
+}
+
+.dropZone{
+    margin-top: 20px;
+    border: 5px solid #ddd;
+    width: 100%;
+    height: 50vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.dropZone.is-active{
+    background-color: #b8d4fe;
+    color:black;
+    border: 2px dashed #618ac9;
+    animation: contenidoInterno 1.5s infinite;
+    animation-timing-function: linear;
+}
+
+.dropZone h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: bisque;
+}
+.dropZone span{
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+}
+
+.dropZone button{
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #5256ad;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.file-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px #ddd;
+}
+#preview{
+    margin-top: 10px;
+}
+
+.p_interno{
+    animation: sombraTexto 1s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes sombraTexto {
+    0%
+    {
+        font-size: 25px;
+        text-shadow: 1px 5px 15px #5256ad;
+    }
+    50%
+    {
+        font-size: 26px;
+        text-shadow: 1px 5px 15px #5256ad, 1px 5px 15px #5256ad;
+    }
+    100%
+    {
+        font-size: 25px;
+        text-shadow: 1px 5px 15px #5256ad, 1px 5px 15px #5256ad;
+    }
+}
+@keyframes contenidoInterno{
+
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.1);
+    }
+    100%
+    {
+        transform: scale(1.2);
+    }
+}
